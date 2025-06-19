@@ -7,14 +7,13 @@ import {
   updateProfile,
 } from "firebase/auth";
 import { auth } from "../utility/firebase";
-import { useNavigate } from "react-router";
 import { useDispatch } from "react-redux";
 import { addUser } from "../store/userSlice";
+import { BACKGROUND_IMAGE, MY_AVATAR } from "../utility/constant";
 
 const Login = () => {
   const [isSignup, setIsSignup] = useState(false);
   const [errorMessage, setErrorMessage] = useState(null);
-  const navigate = useNavigate();
   const dispatch = useDispatch();
 
   const name = useRef(null);
@@ -41,12 +40,10 @@ const Login = () => {
       )
         .then((res) => {
           // signup
-          console.log(res, res.user);
           const user = res.user;
           updateProfile(user, {
             displayName: nameValue,
-            photoURL:
-              "https://avatars.githubusercontent.com/u/125140155?s=400&u=9c34da079ca19a8aab2e37413ca69dd2a529cf2d&v=4",
+            photoURL:USER_AVATAR,
           })
             .then(() => {
               const { uid, email, displayName, photoURL } = auth.currentUser;
@@ -58,8 +55,6 @@ const Login = () => {
                   photoURL: photoURL,
                 })
               );
-              setIsSignup(false);
-              navigate("/browse");
             })
             .catch((err) => {
               const errorMessage = err.message;
@@ -67,7 +62,6 @@ const Login = () => {
             });
         })
         .catch((err) => {
-          console.log(err, err.code, err.message);
           setErrorMessage(err.message);
         });
     } else {
@@ -80,7 +74,6 @@ const Login = () => {
           // Signed in
           const user = userCredential.user;
           console.log(user);
-          navigate("/browse");
         })
         .catch((err) => {
           console.log(err);
@@ -97,7 +90,7 @@ const Login = () => {
       <Header />
       <div className="absolute">
         <img
-          src="https://assets.nflxext.com/ffe/siteui/vlv3/7968847f-3da9-44b3-8bbb-13a46579881f/web/IN-en-20250609-TRIFECTA-perspective_32b70b51-20d4-46db-8a1a-3d5428be5f0e_large.jpg"
+          src={BACKGROUND_IMAGE}
           alt="Background image"
         />
       </div>
@@ -132,7 +125,7 @@ const Login = () => {
         />
         <p className="py-1 text-red-600 font-bold">{errorMessage}</p>
         <button
-          className="w-full p-2 my-6 bg-red-700 rounded-sm font-bold cursor-pointer"
+          className="w-full p-2 my-6 bg-red-700 rounded-sm font-bold cursor-pointer opacity-100"
           onClick={handleButtonClick}
         >
           {isSignup ? "Sign Up" : "Sign In"}
