@@ -8,7 +8,6 @@ import { NETFLIX_LOGO, USER_AVATAR } from "../utility/constant";
 
 const Header = () => {
   const user = useSelector((store) => store.user);
-  console.log(user);
   const navigate = useNavigate();
   const dispatch = useDispatch();
 

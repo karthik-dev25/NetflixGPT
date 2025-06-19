@@ -5,3 +5,17 @@ export const USER_AVATAR = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMwAAA
 export const MY_AVATAR = "https://avatars.githubusercontent.com/u/125140155?s=400&u=9c34da079ca19a8aab2e37413ca69dd2a529cf2d&v=4"
 
 export const BACKGROUND_IMAGE="https://assets.nflxext.com/ffe/siteui/vlv3/7968847f-3da9-44b3-8bbb-13a46579881f/web/IN-en-20250609-TRIFECTA-perspective_32b70b51-20d4-46db-8a1a-3d5428be5f0e_large.jpg"
+
+export const TMDB_API_KEY = "338ca241648274b670992d26b9ffd5dd";
+
+export const TMDB_ACCESS_TOKEN = "eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIzMzhjYTI0MTY0ODI3NGI2NzA5OTJkMjZiOWZmZDVkZCIsIm5iZiI6MTc1MDMyODc2OS40ODE5OTk5LCJzdWIiOiI2ODUzZTVjMTc1NzI5NmYyMTE1NTA1ZTkiLCJzY29wZXMiOlsiYXBpX3JlYWQiXSwidmVyc2lvbiI6MX0.Ax5wU9QCj-Bhk2Dm_03OdcawJFCizSKM4oW75FCdxU4"
+
+export const NOW_PLATING_MOVIE_API = "https://api.themoviedb.org/3/movie/now_playing?page=1"
+
+export const API_OPTIONS =  {
+  method: 'GET',
+  headers: {
+    accept: 'application/json',
+    Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIzMzhjYTI0MTY0ODI3NGI2NzA5OTJkMjZiOWZmZDVkZCIsIm5iZiI6MTc1MDMyODc2OS40ODE5OTk5LCJzdWIiOiI2ODUzZTVjMTc1NzI5NmYyMTE1NTA1ZTkiLCJzY29wZXMiOlsiYXBpX3JlYWQiXSwidmVyc2lvbiI6MX0.Ax5wU9QCj-Bhk2Dm_03OdcawJFCizSKM4oW75FCdxU4'
+  }
+};
