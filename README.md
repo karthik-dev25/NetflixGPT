@@ -35,6 +35,7 @@
 - TMDB Image CDN URL
 - Made the browse page amazing with tailwind CSS
 - usePopular Custom hook
+- Added useToRatedMovies & useUpcomingMovies custom hook
 
 # Features
 - Login /Sign up
