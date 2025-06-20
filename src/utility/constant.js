@@ -12,6 +12,12 @@ export const TMDB_ACCESS_TOKEN = "eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIzMzhjYTI0MTY0O
 
 export const NOW_PLATING_MOVIE_API = "https://api.themoviedb.org/3/movie/now_playing?page=1"
 
+export const POPULAR_MOVIE_API = 'https://api.themoviedb.org/3/movie/popular?page=1';
+
+export const TOP_RATED_MOVIE_API = 'https://api.themoviedb.org/3/movie/top_rated?page=1';
+
+export const UPCOMING_MOVIE_API = 'https://api.themoviedb.org/3/movie/upcoming?page=1'
+
 export const API_OPTIONS =  {
   method: 'GET',
   headers: {
