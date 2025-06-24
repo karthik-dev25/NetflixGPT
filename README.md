@@ -36,6 +36,8 @@
 - Made the browse page amazing with tailwind CSS
 - usePopular Custom hook
 - Added useToRatedMovies & useUpcomingMovies custom hook
+- GPT Search Feature
+- Added Language Change Feature
 
 # Features
 - Login /Sign up
