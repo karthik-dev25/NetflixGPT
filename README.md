@@ -39,7 +39,15 @@
 - GPT Search Page
 - GPT Search Bar
 - (BONUS) Multi-language feature in our App
--
+- Get Open AI api key
+- Gpt Search API Call
+- Fetched gptMovieSuggestions from TMDB
+- created gptSlice added data
+- Reused Movie List Component to make movie Suggestion container
+- Memoization
+- Adding .env file
+- Adding .env file to gitignore
+- Made our site Responsive
 
 # Features
 - Login /Sign up
@@ -61,3 +69,6 @@
     - By default mobile
     - sm is > than mobile device
     - md is > than tab means desktop
+
+# Project Setup
+- Before starting the project please add .env file and add TMDB and OPENAI KEY into it

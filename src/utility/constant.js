@@ -31,8 +31,7 @@ export const API_OPTIONS = {
   method: "GET",
   headers: {
     accept: "application/json",
-    Authorization:
-      "Bearer "+process.env.REACT_APP_TMDB_API_KEY,
+    Authorization: "Bearer " + import.meta.env.VITE_TMDB_API_KEY,
   },
 };
 
@@ -44,6 +43,7 @@ export const ShowLanguageOptions = [
   { identifier: "tamil", name: "Tamil" },
 ];
 
-export const GEMINI_API_KEY = process.env.REACT_APP_GEMINI_API_KEY;
+export const GEMINI_API_KEY = import.meta.env.VITE_GEMINI_API_KEY;
 
-export const  MOVIE_SEARCH_API = 'https://api.themoviedb.org/3/search/movie?include_adult=false&page=1&query='
+export const MOVIE_SEARCH_API =
+  "https://api.themoviedb.org/3/search/movie?include_adult=false&page=1&query=";
