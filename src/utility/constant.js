@@ -32,7 +32,7 @@ export const API_OPTIONS = {
   headers: {
     accept: "application/json",
     Authorization:
-      "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIzMzhjYTI0MTY0ODI3NGI2NzA5OTJkMjZiOWZmZDVkZCIsIm5iZiI6MTc1MDMyODc2OS40ODE5OTk5LCJzdWIiOiI2ODUzZTVjMTc1NzI5NmYyMTE1NTA1ZTkiLCJzY29wZXMiOlsiYXBpX3JlYWQiXSwidmVyc2lvbiI6MX0.Ax5wU9QCj-Bhk2Dm_03OdcawJFCizSKM4oW75FCdxU4",
+      "Bearer "+process.env.REACT_APP_TMDB_API_KEY,
   },
 };
 
@@ -43,3 +43,7 @@ export const ShowLanguageOptions = [
   { identifier: "telugu", name: "Telugu" },
   { identifier: "tamil", name: "Tamil" },
 ];
+
+export const GEMINI_API_KEY = process.env.REACT_APP_GEMINI_API_KEY;
+
+export const  MOVIE_SEARCH_API = 'https://api.themoviedb.org/3/search/movie?include_adult=false&page=1&query='

@@ -39,6 +39,7 @@
 - GPT Search Page
 - GPT Search Bar
 - (BONUS) Multi-language feature in our App
+-
 
 # Features
 - Login /Sign up
@@ -54,3 +55,9 @@
 - NetflixGPT
     - Search Bar
     - Movie Suggestions
+
+
+- Responsive
+    - By default mobile
+    - sm is > than mobile device
+    - md is > than tab means desktop

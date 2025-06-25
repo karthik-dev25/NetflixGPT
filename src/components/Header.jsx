@@ -9,7 +9,7 @@ import {
   ShowLanguageOptions,
   USER_AVATAR,
 } from "../utility/constant";
-import { toggleGptSearchView } from "../store/gptSlice";
+import { addSearchMovieResults, toggleGptSearchView } from "../store/gptSlice";
 import { changeLanguageOption } from "../store/configSlice";
 
 const Header = () => {
@@ -52,10 +52,16 @@ const Header = () => {
 
   const handleGptSearchClick = () => {
     dispatch(toggleGptSearchView());
+    dispatch(
+      addSearchMovieResults({
+        movieName: [],
+        movieResults: [],
+      })
+    );
   };
   const handleLanguageOptionChange = (e) => {
-    dispatch(changeLanguageOption(e.target.value))
-  }
+    dispatch(changeLanguageOption(e.target.value));
+  };
 
   return (
     <div className="w-full flex absolute px-8 py-2 bg-gradient-to-b from-black z-10 justify-between">
@@ -63,7 +69,10 @@ const Header = () => {
       {user && (
         <div className="w-1/2 flex items-center justify-end">
           {showGptSearch && (
-            <select className="m-2 p-2 bg-white rounded-lg" onChange={handleLanguageOptionChange}>
+            <select
+              className="m-2 p-2 bg-white rounded-lg"
+              onChange={handleLanguageOptionChange}
+            >
               {ShowLanguageOptions.map((lang) => (
                 <option key={lang.identifier} value={lang.identifier}>
                   {lang.name}

@@ -5,8 +5,9 @@ import { API_OPTIONS, NOW_PLATING_MOVIE_API } from "../utility/constant";
 
 const useNowPlayingMovies = () => {
   const dispatch = useDispatch();
+  const nowPlayingMovies = useSelector(store => store.movie.nowPlayingMovies);
   useEffect(() => {
-    getNowPlayingMovies();
+    !nowPlayingMovies && getNowPlayingMovies();
   }, []);
 
   const getNowPlayingMovies = async () => {
