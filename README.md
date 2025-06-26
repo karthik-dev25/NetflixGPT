@@ -1,4 +1,4 @@
-# Netflix GPT
+# Netflix GPT - Live URL - https://netgptflix-kn.netlify.app/
 
 - Create Vite App
 - Configured TailwindCSS
