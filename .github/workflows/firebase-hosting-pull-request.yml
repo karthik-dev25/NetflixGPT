@@ -19,4 +19,4 @@ jobs:
         with:
           repoToken: ${{ secrets.GITHUB_TOKEN }}
           firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_NETFLIXGPT_1B46B }}
-          projectId: netflixgpt-1b46b
+          projectId: netflixgpt-1b46b.firebaseapp.com
