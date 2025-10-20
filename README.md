@@ -73,3 +73,7 @@
 
 # Project Setup
 - Before starting the project please add .env file and add TMDB and OPENAI KEY into it
+
+Pictures
+<img width="1919" height="899" alt="image" src="https://github.com/user-attachments/assets/a416bcea-2793-4550-ab4a-1bb33f6b8807" />
+
